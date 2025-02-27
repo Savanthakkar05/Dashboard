@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal Dashboard</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Main Container -->
+  <div class="flex h-screen">
+
+    <!-- Sidebar -->
+    <div class="bg-blue-800 text-white w-64 space-y-6 p-6 hidden md:block">
+      <h2 class="text-2xl font-semibold">Student Portal</h2>
+      <ul class="space-y-4">
+        <li><a href="#" class="hover:text-blue-300">Dashboard</a></li>
+        <li><a href="#" class="hover:text-blue-300">Profile</a></li>
+        <li><a href="#" class="hover:text-blue-300">Courses</a></li>
+        <li><a href="#" class="hover:text-blue-300">Assignments</a></li>
+        <li><a href="#" class="hover:text-blue-300">Grades</a></li>
+        <li><a href="#" class="hover:text-blue-300">Attendance</a></li>
+        <li><a href="#" class="hover:text-blue-300">Settings</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 bg-gray-50 p-8">
+
+      <!-- Navbar -->
+      <div class="flex items-center justify-between mb-6">
+        <button class="text-blue-800 md:hidden" id="sidebarToggle">
+          <i class="fas fa-bars"></i> <!-- For hamburger icon -->
+        </button>
+        <h1 class="text-3xl font-bold">Student Dashboard</h1>
+        <div class="flex items-center space-x-4">
+          <button class="bg-blue-800 text-white px-4 py-2 rounded-lg">Logout</button>
+        </div>
+      </div>
+
+      <!-- Dashboard Content -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Profile Card -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold mb-4">Student Profile</h3>
+          <div class="flex items-center space-x-4">
+            <img src="https://via.placeholder.com/80" alt="Profile Picture" class="w-20 h-20 rounded-full">
+            <div>
+              <p class="font-semibold">John Doe</p>
+              <p class="text-gray-500">Computer Science</p>
+              <p class="text-gray-500">ID: 123456789</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Announcements Card -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold mb-4">Announcements</h3>
+          <ul class="space-y-4">
+            <li class="border-b pb-2">
+              <p class="font-semibold">New Lecture on Data Structures</p>
+              <p class="text-sm text-gray-600">Tomorrow at 10:00 AM</p>
+            </li>
+            <li class="border-b pb-2">
+              <p class="font-semibold">Midterm Exam Schedule Released</p>
+              <p class="text-sm text-gray-600">Check your portal for dates.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Courses Card -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold mb-4">My Courses</h3>
+          <ul class="space-y-4">
+            <li class="border-b pb-2">
+              <p class="font-semibold">Computer Science 101</p>
+              <p class="text-sm text-gray-600">Professor: Dr. Smith</p>
+            </li>
+            <li class="border-b pb-2">
+              <p class="font-semibold">Data Structures</p>
+              <p class="text-sm text-gray-600">Professor: Dr. Johnson</p>
+            </li>
+            <li class="border-b pb-2">
+              <p class="font-semibold">Mathematics 101</p>
+              <p class="text-sm text-gray-600">Professor: Dr. Williams</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Results and Marksheet Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+
+        <!-- Results Card -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold mb-4">Results Summary</h3>
+          <div class="space-y-4">
+            <p><strong>Total Credits:</strong> 15</p>
+            <p><strong>GPA:</strong> 3.85</p>
+            <p><strong>Overall Grade:</strong> A</p>
+            <p><strong>Result Status:</strong> Pass</p>
+          </div>
+        </div>
+
+        <!-- Marksheet Card -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold mb-4">Marksheet</h3>
+          <table class="min-w-full table-auto">
+            <thead>
+              <tr>
+                <th class="px-4 py-2 border-b text-left">Course</th>
+                <th class="px-4 py-2 border-b text-left">Marks Obtained</th>
+                <th class="px-4 py-2 border-b text-left">Total Marks</th>
+                <th class="px-4 py-2 border-b text-left">Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-4 py-2 border-b">Computer Science 101</td>
+                <td class="px-4 py-2 border-b">85</td>
+                <td class="px-4 py-2 border-b">100</td>
+                <td class="px-4 py-2 border-b">A</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border-b">Data Structures</td>
+                <td class="px-4 py-2 border-b">90</td>
+                <td class="px-4 py-2 border-b">100</td>
+                <td class="px-4 py-2 border-b">A+</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2 border-b">Mathematics 101</td>
+                <td class="px-4 py-2 border-b">75</td>
+                <td class="px-4 py-2 border-b">100</td>
+                <td class="px-4 py-2 border-b">B</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Attendance Section -->
+      <div class="bg-white p-6 rounded-lg shadow-lg mt-6">
+        <h3 class="text-lg font-semibold mb-4">Attendance</h3>
+        <table class="min-w-full table-auto">
+          <thead>
+            <tr>
+              <th class="px-4 py-2 border-b text-left">Course</th>
+              <th class="px-4 py-2 border-b text-left">Total Classes</th>
+              <th class="px-4 py-2 border-b text-left">Classes Attended</th>
+              <th class="px-4 py-2 border-b text-left">Attendance (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border-b">Computer Science 101</td>
+              <td class="px-4 py-2 border-b">30</td>
+              <td class="px-4 py-2 border-b">28</td>
+              <td class="px-4 py-2 border-b">93.3%</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border-b">Data Structures</td>
+              <td class="px-4 py-2 border-b">30</td>
+              <td class="px-4 py-2 border-b">27</td>
+              <td class="px-4 py-2 border-b">90%</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border-b">Mathematics 101</td>
+              <td class="px-4 py-2 border-b">30</td>
+              <td class="px-4 py-2 border-b">30</td>
+              <td class="px-4 py-2 border-b">100%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Tailwind CSS and JS for Sidebar Toggle -->
+  <script>
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      const sidebar = document.querySelector('.md\\:block');
+      sidebar.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
